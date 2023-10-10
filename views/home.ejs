@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Home</h1>
+<p><%= StartingContent %></p>
+
+
+<% posts.forEach(element => { %>
+    
+    <h2><%= element.inputTitle %></h2>
+    <p> <%=  (element.inputPost).substring(0, 100) + "..."; %> <a href="/posts/<%= element.inputTitle %>">Read More</a></p>
+
+<% }); %>
+
+<%- include("partials/footer.ejs") %>
